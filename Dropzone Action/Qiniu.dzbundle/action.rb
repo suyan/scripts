@@ -55,7 +55,7 @@ def dragged
   $dz.finish("Url has been copied to clipboard.")
 
   if code != 200
-    $dz.fail("Error uploading file")
+    $dz.fail("Upload failed.")
   else
     url = "#{ENV["root_url"]}/#{result["key"]}"
     $dz.url(url)
