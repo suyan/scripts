@@ -9,7 +9,7 @@
 # KeyModifiers: Command, Option, Control, Shift
 # SkipConfig: No
 # RunsSandboxed: No
-# Version: 1.3
+# Version: 1.2
 # UniqueID: 0830
 # MinDropzoneVersion: 3.5
 
@@ -99,9 +99,9 @@ def clicked():
     if (status != 0):
         webbrowser.open("https://portal.qiniu.com/bucket/" + os.environ['server'] + "/resource")
         dz.fail(output)
+
     inputs = dz.cocoa_dialog('standard-inputbox --title "Filename Required" --e --informative-text "Enter filename without suffix:"')
     inputs = inputs.split("\n")
-    print inputs
     if not inputs[1]:
         file_name = str(uuid.uuid4())
     else:
